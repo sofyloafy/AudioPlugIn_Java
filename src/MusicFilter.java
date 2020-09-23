@@ -6,6 +6,7 @@ public class MusicFilter {
         int minFrequency = 5;
         int maxFrequency = 10;
         List<Integer> frequencies = new ArrayList<Integer>();
+
         for (int i = 0; i < frequency.size(); i++) {
             if (frequency.get(i) < minFrequency) {
                 frequencies.add(minFrequency);

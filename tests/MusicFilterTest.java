@@ -49,4 +49,18 @@ public class MusicFilterTest {
         ArrayList<Integer> minFrequency = new ArrayList<>(Arrays. asList(5, 5, 5));
         assertEquals(minFrequency, musicFilter.checkBandwidth(frequency));
     }
+
+    @Test
+    public void testMultipleMaxBandwidthFilter(){
+        ArrayList<Integer> frequency = new ArrayList<>(Arrays. asList(11, 12));
+        ArrayList<Integer> maxFrequency = new ArrayList<>(Arrays. asList(10, 10));
+        assertEquals(maxFrequency, musicFilter.checkBandwidth(frequency));
+    }
+
+    @Test
+    public void testMultipleMaximumsBandwidthFilter(){
+        ArrayList<Integer> frequency = new ArrayList<>(Arrays. asList(11, 10, 8));
+        ArrayList<Integer> maxFrequency = new ArrayList<>(Arrays. asList(10, 10, 8));
+        assertEquals(maxFrequency, musicFilter.checkBandwidth(frequency));
+    }
 }

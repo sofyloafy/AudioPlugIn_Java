@@ -27,4 +27,10 @@ public class MusicFilterTest {
         ArrayList<Integer> maxFrequency = new ArrayList<>(Arrays. asList(10));
         assertEquals(maxFrequency, musicFilter.checkBandwidth(frequency));
     }
+
+    @Test
+    public void testMultipleBandwidthFilter(){
+        ArrayList<Integer> frequency = new ArrayList<>(Arrays. asList(6, 7));
+        assertEquals(frequency, musicFilter.checkBandwidth(frequency));
+    }
 }

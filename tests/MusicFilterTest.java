@@ -11,8 +11,21 @@ public class MusicFilterTest {
 
     @Test
     public void testBandwidthFilter(){
-        int[] frequency = {6};
+        ArrayList<Integer> frequency = new ArrayList<>(Arrays. asList(6));
+        assertEquals(frequency, musicFilter.checkBandwidth(frequency));
+    }
+
+    @Test
+    public void testMinBandwidthFilter(){
+        ArrayList<Integer> frequency = new ArrayList<>(Arrays. asList(3));
         ArrayList<Integer> minFrequency = new ArrayList<>(Arrays. asList(5));
         assertEquals(minFrequency, musicFilter.checkBandwidth(frequency));
     }
+//
+//    @Test
+//    public void testMaxBandwidthFilter(){
+//        int[] frequency = {3};
+//        ArrayList<Integer> minFrequency = new ArrayList<>(Arrays. asList(5));
+//        assertEquals(minFrequency, musicFilter.checkBandwidth(frequency));
+//    }
 }

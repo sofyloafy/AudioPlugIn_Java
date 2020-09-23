@@ -7,6 +7,7 @@ public class MusicFilterTest {
 
     @Test
     public void testBandwidthFilter(){
-        assertEquals("Hello", musicFilter.checkBandwidth());
+        int[] result = {3};
+        assertEquals(result, musicFilter.checkBandwidth(result));
     }
 }

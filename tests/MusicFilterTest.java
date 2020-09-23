@@ -21,11 +21,10 @@ public class MusicFilterTest {
         ArrayList<Integer> minFrequency = new ArrayList<>(Arrays. asList(5));
         assertEquals(minFrequency, musicFilter.checkBandwidth(frequency));
     }
-//
-//    @Test
-//    public void testMaxBandwidthFilter(){
-//        int[] frequency = {3};
-//        ArrayList<Integer> minFrequency = new ArrayList<>(Arrays. asList(5));
-//        assertEquals(minFrequency, musicFilter.checkBandwidth(frequency));
-//    }
+    @Test
+    public void testMaxBandwidthFilter(){
+        ArrayList<Integer> frequency = new ArrayList<>(Arrays. asList(11));
+        ArrayList<Integer> maxFrequency = new ArrayList<>(Arrays. asList(10));
+        assertEquals(maxFrequency, musicFilter.checkBandwidth(frequency));
+    }
 }

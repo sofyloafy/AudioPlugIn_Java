@@ -6,12 +6,14 @@ public class MusicFilter {
         int minFrequency = 5;
         int maxFrequency = 10;
         List<Integer> frequencies = new ArrayList<Integer>();
-        if (frequency.get(0) < minFrequency) {
-            frequencies.add(minFrequency);
-        } else if(frequency.get(0) >= maxFrequency) {
-            frequencies.add(maxFrequency);
-        } else {
-            return frequency;
+        for (int i = 0; i < frequency.size(); i++) {
+            if (frequency.get(i) < minFrequency) {
+                frequencies.add(minFrequency);
+            } else if(frequency.get(i) >= maxFrequency) {
+                frequencies.add(maxFrequency);
+            } else {
+                frequencies.add(frequency.get(i));
+            }
         }
         return frequencies;
     }

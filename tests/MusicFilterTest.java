@@ -32,5 +32,14 @@ public class MusicFilterTest {
     public void testMultipleBandwidthFilter(){
         ArrayList<Integer> frequency = new ArrayList<>(Arrays. asList(6, 7));
         assertEquals(frequency, musicFilter.checkBandwidth(frequency));
+        ArrayList<Integer> moreFrequencies = new ArrayList<>(Arrays. asList(6, 7,9, 8));
+        assertEquals(moreFrequencies, musicFilter.checkBandwidth(moreFrequencies));
+    }
+
+    @Test
+    public void testMultipleMinBandwidthFilter(){
+        ArrayList<Integer> frequency = new ArrayList<>(Arrays. asList(2, 6));
+        ArrayList<Integer> minFrequency = new ArrayList<>(Arrays. asList(5, 6));
+        assertEquals(minFrequency, musicFilter.checkBandwidth(frequency));
     }
 }

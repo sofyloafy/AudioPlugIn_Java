@@ -1,5 +1,9 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MusicFilterTest {
@@ -7,7 +11,8 @@ public class MusicFilterTest {
 
     @Test
     public void testBandwidthFilter(){
-        int[] result = {3};
-        assertEquals(result, musicFilter.checkBandwidth(result));
+        int[] frequency = {6};
+        ArrayList<Integer> minFrequency = new ArrayList<>(Arrays. asList(5));
+        assertEquals(minFrequency, musicFilter.checkBandwidth(frequency));
     }
 }
